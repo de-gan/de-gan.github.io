@@ -56,7 +56,7 @@
 			.appendTo($body)
 			.panel({
 				delay: 500,
-				hideOnClick: true,
+				hideOnClick: false,
 				hideOnSwipe: true,
 				resetScroll: true,
 				resetForms: true,
@@ -65,16 +65,13 @@
 				visibleClass: 'is-menu-visible'
 			});
 		
-		// Dropdown
-		$(document).on('click', '.has-dropdown > a', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			$(this).parent().toggleClass('active');
-			return false;
-		});
-			  
-		$(document).on('click', '.dropdown-content', function(e) {
-			e.stopPropagation();
+		document.addEventListener('DOMContentLoaded', function() {
+			const projectsDropdown = document.querySelector('.has-dropdown > a');
+				
+			projectsDropdown.addEventListener('click', function(e) {
+				e.preventDefault();
+				this.parentElement.classList.toggle('active');
+			});
 		});
 
 	// Header.
