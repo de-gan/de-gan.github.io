@@ -65,13 +65,16 @@
 				visibleClass: 'is-menu-visible'
 			});
 		
-		document.addEventListener('DOMContentLoaded', function() {
-			const projectsDropdown = document.querySelector('.has-dropdown > a');
-				
-			projectsDropdown.addEventListener('click', function(e) {
-				e.preventDefault();
-				this.parentElement.classList.toggle('active');
-			});
+		// Dropdown
+		$(document).on('click', '.has-dropdown > a', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$(this).parent().toggleClass('active');
+			return false;
+		});
+			  
+		$(document).on('click', '.dropdown-content', function(e) {
+			e.stopPropagation();
 		});
 
 	// Header.
