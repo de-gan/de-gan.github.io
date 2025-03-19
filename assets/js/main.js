@@ -64,6 +64,15 @@
 				target: $body,
 				visibleClass: 'is-menu-visible'
 			});
+		
+		document.addEventListener('DOMContentLoaded', function() {
+			const projectsDropdown = document.querySelector('.has-dropdown > a');
+				
+			projectsDropdown.addEventListener('click', function(e) {
+				e.preventDefault();
+				this.parentElement.classList.toggle('active');
+			});
+		});
 
 	// Header.
 		if ($banner.length > 0
