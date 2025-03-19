@@ -3438,6 +3438,47 @@ input, select, textarea {
 		transform: translateX(0);
 	}
 
+/* Dropdown Menu Styles */
+	.dropdown {
+		position: relative;
+	}
+	
+	.dropdown-toggle {
+		cursor: pointer;
+	}
+	
+	.dropdown-menu {
+		display: none;
+		position: relative;
+		left: 1em;
+		padding-top: 0.5em;
+		list-style: none;
+		background-color: rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+	}
+	
+	.dropdown:hover .dropdown-menu,
+	.dropdown-toggle:focus + .dropdown-menu {
+		display: block;
+	}
+	
+	.dropdown-menu li {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.dropdown-menu a {
+		display: block;
+		padding: 0.5em 1em;
+		color: inherit;
+		text-decoration: none;
+		transition: background-color 0.2s ease;
+	}
+	
+	.dropdown-menu a:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+
 /* Header */
 
 	#header {
