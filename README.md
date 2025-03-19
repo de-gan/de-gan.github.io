@@ -1,2 +1,2 @@
 # de-gan.github.io
-Personal portfolio of my projects
+Personal portfolio for my projects
